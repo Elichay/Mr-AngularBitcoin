@@ -14,6 +14,7 @@ import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.com
 import { ContactListComponent } from './cmps/contact-list/contact-list.component';
 import { ContactPreviewComponent } from './cmps/contact-preview/contact-preview.component';
 import { InputComponent } from './cmps/input/input.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ChartPageComponent } from './pages/chart-page/chart-page.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
@@ -50,6 +51,7 @@ import { TransferPreviewComponent } from './cmps/transfer-preview/transfer-previ
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

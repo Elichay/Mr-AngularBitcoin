@@ -1,7 +1,10 @@
 <fieldset class="home-page-container">
   <div *ngIf="user" class="user-details-container">
     <p class="user-details-name">Welcome, {{ user.name }}!</p>
-    <p class="user-details-coins">You have {{ user.bitCoin }} coins.</p>
+    <p class="user-details-coins">You have {{ user.bitCoin }}
+      <fa-icon [icon]="faBitcoinSign"></fa-icon>
+      coins.
+    </p>
   </div>
   <div *ngIf="bitcoinRate" class="user-details-container user-details-rates">
     <p class="user-details-BTC">Current Bitcoin rate is {{ bitcoinRate }} USD.</p>

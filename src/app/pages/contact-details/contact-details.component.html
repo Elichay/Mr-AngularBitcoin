@@ -6,17 +6,16 @@
     <p class="contact-details-email">Email: {{ contact.email }}</p>
     <div class="actions flex">
         <button (click)="onBack()">
-            Back:
-            <img src="../../assets/img/back.png" alt="">
+            Back: 
+            <fa-icon [icon]="faCircleLeft"></fa-icon>
         </button>
-        <button>
+        <button (click)="onRemoveContact($event)">
             Delete:
-            <img src="../../assets/img/delete.png" alt="">
+            <fa-icon [icon]="faUserSlash"></fa-icon>
         </button>
-        <button>
+        <button  (click)="onEditContact($event)">
             Edit:
-            <a routerLink="/contact/edit">Edit Contact</a>
-            <img src="../../assets/img/edit.png" alt="">
+            <fa-icon [icon]="faUserPen"></fa-icon>
         </button>
     </div>
 </div>

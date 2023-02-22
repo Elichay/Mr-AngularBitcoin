@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { BitcoinService } from '../../services/bitcoin.service'
 import { UserService } from '../../services/user.service'
+import { faBitcoinSign } from '@fortawesome/free-solid-svg-icons'
 
 import { User } from '../../model/user'
 
@@ -10,7 +11,7 @@ import { User } from '../../model/user'
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-
+  faBitcoinSign = faBitcoinSign
 user!: User
 bitcoinRate!: number
 usdRate!: number

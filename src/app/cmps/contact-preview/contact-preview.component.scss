@@ -33,23 +33,89 @@
         flex-grow: 1;
     }
 
-    .actions{
+//     .actions{
+//         position: relative;
+//         gap: 8px;
 
-        .remove-btn{
-            background-color: #f44336;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            &:hover {
-                background-color: #d32f2f;
-            }
-        }
-    }
+
+//         .actions::before {
+//             content: attr(data-label);
+//             position: absolute;
+//             top: -1.5em;
+//             left: 0.5em;
+//             font-size: 0.75em;
+//             color: #888;
+//             transition: all 0.2s ease-out;
+//           }
+          
+//           .actions:focus-within::before,
+//           .actions:not(:placeholder-shown)::before {
+//             top: -2.5em;
+//             font-size: 0.6em;
+//             color: #333;
+//           }
+
+
+
+//         .remove-btn{
+//             background-color: #f44336;
+//             color: white;
+//             border: none;
+//             border-radius: 50%;
+//             width: 20px;
+//             height: 20px;
+//             cursor: pointer;
+//             transition: all 0.3s ease-in-out;
+//             &:hover {
+//                 background-color: #d32f2f;
+//             }
+//         }
+//     }
     
+.actions {
+    position: relative;
+    gap: 8px;
+  
+    .remove-btn {
+      position: relative;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+  
+      &::before {
+        content: attr(data-label);
+        position: absolute;
+        top: -1.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75em;
+        color: #888;
+        transition: all 0.2s ease-out;
+        opacity: 0;
+        pointer-events: none;
+      }
+  
+      &:hover::before {
+        // top: -2.5em;
+        left: -1.5em;
+        top: 0.3rem;
+        font-size: 0.6em;
+        color: #333;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+
+
+
+
 }
 
 
